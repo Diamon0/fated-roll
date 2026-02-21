@@ -8,7 +8,7 @@ COPY go.mod go.sum ./
 RUN go mod download
 COPY . .
 ENV CGO_ENABLED=0 GOOS=linux
-RUN go build -o /out/fated-rolls ./cmd
+RUN go build -o /out/fated-rolls ./cmd/fated-rolls
 
 # Runtime
 FROM alpine:3.23

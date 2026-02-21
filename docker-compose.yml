@@ -1,0 +1,7 @@
+services:
+  fated-rolls:
+    container_name: fated-rolls
+    build: .
+    image: ghcr.io/diamon0/fated-roll:latest
+    restart: unless-stopped
+    env_file: .env
